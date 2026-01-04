@@ -1,0 +1,24 @@
+fastapi
+uvicorn
+langgraph
+langchain
+langchain-openai
+python-dotenv
+
+langgraph
+langchain
+langchain-openai
+langchain-chroma
+
+langchain-community
+chromadb
+pypdf
+python-dotenv
+fastapi
+uvicorn
+
+
+
+# pip install langgraph langchain langchain-openai langchain-chroma
+# pip install langchain-community chromadb pypdf python-dotenv fastapi uvicorn
+

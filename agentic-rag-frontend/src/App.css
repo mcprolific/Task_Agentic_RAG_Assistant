@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS for dark/light theme */
+:root {
+  --bg-color: #f9fafb;       /* light background */
+  --text-color: #111827;     /* light text */
+  --toggle-bg: #d1d5db;      /* light toggle bg */
+  --toggle-dot: #ffffff;     /* toggle dot */
+}
+
+[data-theme="dark"] {
+  --bg-color: #1f2937;       /* dark background */
+  --text-color: #f3f4f6;     /* dark text */
+  --toggle-bg: #374151;      /* dark toggle bg */
+  --toggle-dot: #ffffff;     /* toggle dot */
+}
+
+/* Apply variables to all body and main container */
+body, #root {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Toggle styles */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle-label {
+  margin-right: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.toggle-switch {
+  width: 3rem;
+  height: 1.5rem;
+  background-color: var(--toggle-bg);
+  border-radius: 9999px;
+  padding: 0.125rem;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-dot {
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--toggle-dot);
+  border-radius: 9999px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.toggle-dot.dark {
+  transform: translateX(1.5rem);
+}
